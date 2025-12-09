@@ -7,9 +7,10 @@ Eine umfassende Analyse und Visualisierung der Sterbewahrscheinlichkeiten in Deu
 Dieses Projekt analysiert die offiziellen deutschen Sterbetafeln vom Statistischen Bundesamt (Destatis) und berechnet die Sterbewahrscheinlichkeit für jedes Lebensalter-Jahrzehnt, getrennt nach Geschlecht und Zeitperioden.
 
 **Wichtige Erkenntnisse:**
-- Frauen haben durchgehend eine niedrigere Sterbewahrscheinlichkeit als Männer (außer im sehr hohen Alter 90+)
-- Die Sterblichkeitsraten während der Pandemie (2020-2022) waren bei jungen Menschen sogar leicht niedriger
-- Im hohen Alter (80-100 Jahre) steigt die Sterbewahrscheinlichkeit exponentiell an
+- Frauen haben durchgehend eine niedrigere Sterbewahrscheinlichkeit als Männer
+- Persistente Übersterblichkeit nach der Pandemie bei 10-20 Jährigen und 70-80 Jährigen
+- Überraschend: Bei über 80 Jahren sank die Sterbewahrscheinlichkeit während der Pandemie
+- Absolute Sterbewahrscheinlichkeit erreicht über 95% bei 90+ Jahren, aber ohne Pandemie-Anstieg
 
 ## Dateien im Projekt
 
