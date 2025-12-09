@@ -1,8 +1,10 @@
 # Sterbevergleich - Deutsche Sterbetafeln 2016-2024
 
-Eine umfassende Analyse und Visualisierung der Sterbewahrscheinlichkeiten in Deutschland über drei Zeitperioden (2016-2018, 2020-2022, 2022-2024). Also vor, während und nach der COVID-19-Pandemie. Die offiziellen Zahlen des Statistischen Bundesamts (Destatis) bestätgen nicht das vorliegen einer Pandemie. Während der Pandemiezeit (2020-2022) gab es nur in bestimmten Altersgruppen eine leicht erhöhte Sterbewahrscheinlichkeit von 3 bis 5%. Keine bei Menschen unter 60 undüberraschenderweise auch nicht über 80.
+Eine umfassende Analyse und Visualisierung der Sterbewahrscheinlichkeiten in Deutschland über drei Zeitperioden (2016-2018, 2020-2022, 2022-2024) - vor, während und nach der COVID-19-Pandemie.
 
-Die Massnahmen waren völlig unverhältnismässig und durch keine belastbaren Daten gedeckt. Das betrifft Impfung, Freiheitsberaubung, Maskenpflicht Ausbildungsverweigerung. Die Zahlen kommen von unverdächtiger Stelle, dem Statistischen Bundesamt (Destatis). Die Berechnungen hier unten sind von jedem nachvollziehbar.
+Die offiziellen Zahlen des Statistischen Bundesamts (Destatis) bestätigen nicht das Vorliegen einer dramatischen Pandemie. Während der Pandemiezeit (2020-2022) gab es nur in bestimmten Altersgruppen eine leicht erhöhte Sterbewahrscheinlichkeit von 3 bis 5%. Bei Menschen unter 60 Jahren nicht, und überraschenderweise auch nicht über 80 Jahren.
+
+Die Daten stammen von unverdächtiger Stelle - dem Statistischen Bundesamt (Destatis). Die Berechnungen sind von jedem nachvollziehbar und überprüfbar.
 
 Dieses Projekt analysiert die offiziellen deutschen Sterbetafeln vom Statistischen Bundesamt (Destatis) und berechnet die Sterbewahrscheinlichkeit für jedes Lebensalter-Jahrzehnt, getrennt nach Geschlecht und Zeitperioden.
 ## Sterbewahrscheinlichkeit nach Jahrzehnt (Durchschnitt)
@@ -63,9 +65,9 @@ Eine Rolle der Impfung bei der persistenten Übersterblichkeit dieser Altersgrup
 ## Dateien im Projekt
 
 ### Eingabedaten
-- **Sterbetafel2016-2018.csv** - Offizielle deutsche Sterbetafel für die Periode 2016-2018
-- **Sterbetafel2020-2022.csv** - Offizielle deutsche Sterbetafel für die Periode 2020-2022
-- **Sterbetafel2022-2024.csv** - Offizielle deutsche Sterbetafel für die Periode 2022-2024
+- **[Sterbetafel2016-2018.csv](Sterbetafel2016-2018.csv)** - Offizielle deutsche Sterbetafel für die Periode 2016-2018
+- **[Sterbetafel2020-2022.csv](Sterbetafel2020-2022.csv)** - Offizielle deutsche Sterbetafel für die Periode 2020-2022
+- **[Sterbetafel2022-2024.csv](Sterbetafel2022-2024.csv)** - Offizielle deutsche Sterbetafel für die Periode 2022-2024
 
 ### Ausgabedateien
 
@@ -124,7 +126,7 @@ Sterbewahrscheinlichkeit = 465 / 100.000 × 100 = 0.46%
 # Markdown-Report lesen
 cat Sterbevergleich.md
 
-# PDFs anschauen
+# PDFs ansehen
 open Sterbevergleich.pdf
 open Sterbevergleich_2col.pdf  # Empfohlen: kompakt und übersichtlich
 ```
@@ -139,21 +141,25 @@ open sterbevergleich_plots.html
 ### 3. Eigene Analysen durchführen
 
 Daten für eine einzelne CSV-Datei berechnen:
+
 ```bash
 python Sterbevergleich.py
 ```
 
 Alle 3 Dateien verarbeiten und Markdown generieren:
+
 ```bash
 python Sterbevergleich_all.py
 ```
 
 Plots generieren:
+
 ```bash
 python plot_sterbevergleich.py
 ```
 
 2-spaltiges PDF generieren:
+
 ```bash
 python generate_pdf.py
 ```
