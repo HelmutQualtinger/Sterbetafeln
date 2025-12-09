@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sterbevergleich - Interaktive Plots</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .plot {
+            width: 100%;
+            height: 600px;
+        }
+        .plot-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        @media (max-width: 1400px) {
+            .plot-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        .info {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #1976d2;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sterbewahrscheinlichkeit - Vergleich deutscher Sterbetafeln</h1>
+
+    <div class="info">
+        <strong>Datenquelle:</strong> Deutsche Sterbetafeln 2016-2018, 2020-2022, 2022-2024<br>
+        <strong>Darstellung:</strong> Lineare Skala
+    </div>
+
+    <h2>Plot 1: Alle drei Epochen nebeneinander (nach Geschlecht)</h2>
+
+    <div class="plot-row">
+        <div id="plot1-male" class="plot"></div>
+        <div id="plot1-female" class="plot"></div>
+        <div id="plot1-total" class="plot"></div>
+    </div>
+
+    <h2>Plot 2: Jede Epoche einzeln (Männer, Frauen, Gesamt)</h2>
+
+    <div class="plot-row">
+        <div id="plot2-2016" class="plot"></div>
+        <div id="plot2-2020" class="plot"></div>
+        <div id="plot2-2022" class="plot"></div>
+    </div>
+
+    <script>
+        var ages = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90];
+        var data_male = {"2016-2018": [0.46499999999999997, 0.19189229919123926, 0.45297149299404094, 0.810969320686796, 1.930840435509522, 5.663319403729807, 14.04297520661157, 29.300310232546213, 66.73436083408885, 96.47334568843344], "2020-2022": [0.422, 0.18879672216754706, 0.442700472884596, 0.8175846387064175, 1.9899939882414077, 5.509003202062628, 14.516608170405659, 30.407362121114616, 66.62844460884038, 97.06827754378186], "2022-2024": [0.455, 0.19890501783113168, 0.4600038249771005, 0.8099908989786633, 1.9604644761390166, 5.246136888297319, 14.071399567607907, 30.391192735539406, 66.18167807276663, 97.20594618055556]};
+        var data_female = {"2016-2018": [0.393, 0.11746162418303935, 0.19599959794954266, 0.4280175235409638, 1.112572064326894, 3.114452285977294, 7.67801530746899, 18.209989479943285, 54.7443622687936, 94.0160642570281], "2020-2022": [0.371, 0.11241706731975629, 0.19092215400383852, 0.4329135079082223, 1.0991233303335795, 2.974133524179532, 7.854501006311841, 19.17046896977598, 54.494008460308706, 94.88574537540805], "2022-2024": [0.394, 0.12449049254061001, 0.20104139442311172, 0.43411695977115694, 1.0874953212410599, 2.899484536082474, 7.871204221569185, 19.566012713220836, 53.6486909059897, 94.68261269549218]};
+        var data_total = {"2016-2018": [0.429, 0.1546769616871393, 0.3244855454717918, 0.6194934221138799, 1.521706249918208, 4.388885844853551, 10.86049525704028, 23.75514985624475, 60.73936155144122, 95.24470497273077], "2020-2022": [0.39649999999999996, 0.1506068947436517, 0.31681131344421726, 0.6252490733073199, 1.5445586592874936, 4.24156836312108, 11.18555458835875, 24.7889155454453, 60.561226534574544, 95.97701145959496], "2022-2024": [0.4245, 0.16169775518587085, 0.3305226097001061, 0.6220539293749101, 1.5239798986900381, 4.072810712189897, 10.971301894588546, 24.97860272438012, 59.91518448937816, 95.94427943802387]};
+
+        var colors = {
+            '2016-2018': '#1f77b4',
+            '2020-2022': '#ff7f0e',
+            '2022-2024': '#2ca02c'
+        };
+
+        // Plot 1: Männer
+        var trace1_male_2016 = {x: ages, y: data_male['2016-2018'], mode: 'lines+markers', name: '2016-2018', line: {color: colors['2016-2018']}, marker: {size: 6}};
+        var trace1_male_2020 = {x: ages, y: data_male['2020-2022'], mode: 'lines+markers', name: '2020-2022', line: {color: colors['2020-2022']}, marker: {size: 6}};
+        var trace1_male_2022 = {x: ages, y: data_male['2022-2024'], mode: 'lines+markers', name: '2022-2024', line: {color: colors['2022-2024']}, marker: {size: 6}};
+        var layout1_male = {title: 'Männer', xaxis: {title: 'Alter (Jahre)'}, yaxis: {title: 'Sterbewahrscheinlichkeit (%)'}, hovermode: 'x unified'};
+        Plotly.newPlot('plot1-male', [trace1_male_2016, trace1_male_2020, trace1_male_2022], layout1_male, {responsive: true});
+
+        // Plot 1: Frauen
+        var trace1_female_2016 = {x: ages, y: data_female['2016-2018'], mode: 'lines+markers', name: '2016-2018', line: {color: colors['2016-2018']}, marker: {size: 6}};
+        var trace1_female_2020 = {x: ages, y: data_female['2020-2022'], mode: 'lines+markers', name: '2020-2022', line: {color: colors['2020-2022']}, marker: {size: 6}};
+        var trace1_female_2022 = {x: ages, y: data_female['2022-2024'], mode: 'lines+markers', name: '2022-2024', line: {color: colors['2022-2024']}, marker: {size: 6}};
+        var layout1_female = {title: 'Frauen', xaxis: {title: 'Alter (Jahre)'}, yaxis: {title: 'Sterbewahrscheinlichkeit (%)'}, hovermode: 'x unified'};
+        Plotly.newPlot('plot1-female', [trace1_female_2016, trace1_female_2020, trace1_female_2022], layout1_female, {responsive: true});
+
+        // Plot 1: Gesamt
+        var trace1_total_2016 = {x: ages, y: data_total['2016-2018'], mode: 'lines+markers', name: '2016-2018', line: {color: colors['2016-2018']}, marker: {size: 6}};
+        var trace1_total_2020 = {x: ages, y: data_total['2020-2022'], mode: 'lines+markers', name: '2020-2022', line: {color: colors['2020-2022']}, marker: {size: 6}};
+        var trace1_total_2022 = {x: ages, y: data_total['2022-2024'], mode: 'lines+markers', name: '2022-2024', line: {color: colors['2022-2024']}, marker: {size: 6}};
+        var layout1_total = {title: 'Gesamt (Durchschnitt)', xaxis: {title: 'Alter (Jahre)'}, yaxis: {title: 'Sterbewahrscheinlichkeit (%)'}, hovermode: 'x unified'};
+        Plotly.newPlot('plot1-total', [trace1_total_2016, trace1_total_2020, trace1_total_2022], layout1_total, {responsive: true});
+
+        // Plot 2: Periode 2016-2018
+        var trace2_2016_m = {x: ages, y: data_male['2016-2018'], mode: 'lines+markers', name: 'Männer', line: {color: '#1f77b4'}, marker: {size: 6}};
+        var trace2_2016_w = {x: ages, y: data_female['2016-2018'], mode: 'lines+markers', name: 'Frauen', line: {color: '#ff1493'}, marker: {size: 6}};
+        var trace2_2016_t = {x: ages, y: data_total['2016-2018'], mode: 'lines+markers', name: 'Gesamt', line: {color: '#2ca02c'}, marker: {size: 6}};
+        var layout2_2016 = {title: 'Periode 2016-2018', xaxis: {title: 'Alter (Jahre)'}, yaxis: {title: 'Sterbewahrscheinlichkeit (%)'}, hovermode: 'x unified'};
+        Plotly.newPlot('plot2-2016', [trace2_2016_m, trace2_2016_w, trace2_2016_t], layout2_2016, {responsive: true});
+
+        // Plot 2: Periode 2020-2022
+        var trace2_2020_m = {x: ages, y: data_male['2020-2022'], mode: 'lines+markers', name: 'Männer', line: {color: '#1f77b4'}, marker: {size: 6}};
+        var trace2_2020_w = {x: ages, y: data_female['2020-2022'], mode: 'lines+markers', name: 'Frauen', line: {color: '#ff1493'}, marker: {size: 6}};
+        var trace2_2020_t = {x: ages, y: data_total['2020-2022'], mode: 'lines+markers', name: 'Gesamt', line: {color: '#2ca02c'}, marker: {size: 6}};
+        var layout2_2020 = {title: 'Periode 2020-2022 (Pandemie)', xaxis: {title: 'Alter (Jahre)'}, yaxis: {title: 'Sterbewahrscheinlichkeit (%)'}, hovermode: 'x unified'};
+        Plotly.newPlot('plot2-2020', [trace2_2020_m, trace2_2020_w, trace2_2020_t], layout2_2020, {responsive: true});
+
+        // Plot 2: Periode 2022-2024
+        var trace2_2022_m = {x: ages, y: data_male['2022-2024'], mode: 'lines+markers', name: 'Männer', line: {color: '#1f77b4'}, marker: {size: 6}};
+        var trace2_2022_w = {x: ages, y: data_female['2022-2024'], mode: 'lines+markers', name: 'Frauen', line: {color: '#ff1493'}, marker: {size: 6}};
+        var trace2_2022_t = {x: ages, y: data_total['2022-2024'], mode: 'lines+markers', name: 'Gesamt', line: {color: '#2ca02c'}, marker: {size: 6}};
+        var layout2_2022 = {title: 'Periode 2022-2024', xaxis: {title: 'Alter (Jahre)'}, yaxis: {title: 'Sterbewahrscheinlichkeit (%)'}, hovermode: 'x unified'};
+        Plotly.newPlot('plot2-2022', [trace2_2022_m, trace2_2022_w, trace2_2022_t], layout2_2022, {responsive: true});
+    </script>
+</body>
+</html>
