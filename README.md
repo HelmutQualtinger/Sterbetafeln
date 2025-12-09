@@ -98,16 +98,22 @@ Dies deutet darauf hin, dass die Übersterblichkeit in diesen Altersgruppen nich
 - **20-60 Jahre:** Weitgehend stabil, teilweise sogar verbessert (z.B. 50-60: -7.2%)
 - **Über 80 Jahre:** Stabil, trotz hoher absoluter Werte
 
-### Interpretation
+### Interpretation: Differenzierte Alterseffekte
 
-**Bei über 10-Jährigen Kindern und 70-80-Jährigen:**
-Die persistente Übersterblichkeit nach der Pandemie (2022-2024), also nachdem COVID-19 kein primärer Todesfaktor mehr war, ist auffällig. Mögliche Erklärungen umfassen:
-- Auswirkungen der COVID-19-Impfkampagne (kardiovaskuläre oder immunologische Effekte)
+**Die Pandemie/Impfung hatte unerwartete Auswirkungen nach Alter:**
+
+- **Über 80 Jahre:** Sterbewahrscheinlichkeit sank während der Pandemie (-0.3% bis +0.8%). Dies spricht GEGEN dramatische COVID-19-Todesfälle in dieser Hochrisikogruppe - möglicherweise Effekt der Impfkampagne
+- **70-80 Jahre:** Moderat erhöht (+4.3%), bleibt nach Pandemie erhöht (+5.1%)
+- **10-20 Jahre:** Normale Sterbewahrscheinlichkeit während Pandemie (-2.7%), aber danach erhöht (+4.5%)
+
+**Auffälligkeit:**
+Die persistente Übersterblichkeit bei 10-20 Jährigen und 70-80 Jährigen nach der Pandemie (2022-2024), nachdem COVID-19 nicht mehr primärer Todesfaktor war, deutet auf andere ursächliche Faktoren hin. Mögliche Erklärungen:
+- Auswirkungen der COVID-19-Impfkampagne (kardiovaskuläre oder immunologische Nebenwirkungen)
 - Langzeitfolgen von COVID-19 ("Long COVID")
 - Veränderte Gesundheitsverhaltensweisen während/nach der Pandemie
-- Änderungen in der Krankheitsbehandlung während der Pandemie
+- Kumulativeeffekte von Lockdowns und Stress
 
-Eine Impfnebenwirkung ist basierend auf dieser Datenanalyse nicht auszuschließen, erfordert aber weitere epidemiologische Untersuchungen.
+Eine Rolle der Impfung bei der persistenten Übersterblichkeit dieser Altersgruppen ist basierend auf dieser Datenanalyse nicht auszuschließen, erfordert aber weitere epidemiologische Untersuchungen zur Kausalität.
 
 ## Verwendung
 
