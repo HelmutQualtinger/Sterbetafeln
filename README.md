@@ -96,24 +96,23 @@ Sterbewahrscheinlichkeit = 465 / 100.000 × 100 = 0.46%
 
 **Die Unterschiede liegen durchgehend unter 8% und sind epidemiologisch nicht signifikant. Die Rückkehr zur Normalität (2022-2024) zeigt keine neuen Trends.**
 
-### Beobachtungen nach Pandemie (2022-2024)
+### Wo stieg die Sterbewahrscheinlichkeit?
 
-- **Unter 60:** Stabilisierung auf dem Niveau von 2016-2018
-- **60-70:** Leichte Normalisierung nach oben gegenüber 2020-2022 (+1.0%)
-- **70-80:** Continuation des Anstiegs (+5.1% gegenüber 2016-2018)
-- **80+:** Insgesamt stabil, keine dramatischen Veränderungen
+**Nur im Alter 60-80 Jahren gab es einen moderaten Anstieg:**
 
-### Keine COVID-Todesfälle epidemiologisch nachweisbar
+- **60-70 Jahre:** +3.0% während Pandemie, dann +1.0% normalisiert (2022-2024)
+- **70-80 Jahre:** +4.3% während Pandemie, fortsetzend +5.1% (2022-2024)
+- **Über 80 Jahren:** Praktisch stabil (-0.3% bis +0.8%), keine Erhöhung
 
-Die Analyse zeigt:
-- Junge Menschen: konsistent keine Pandemie-Signatur
-- Menschen 60+: marginale Unterschiede, konsistent über alle Perioden
-- Post-Pandemie: keine Rebound-Effekte bei jüngeren Altersgruppen
-- Schlussfolgerung: Die Impfkampagne bei älteren Menschen war wirksam, COVID-Todesfälle sind in der Gesamtmortalität nicht dramatisch sichtbar
+Der Anstieg zwischen 60-80 Jahren war moderat und könnte demografische Faktoren (Bevölkerungsalterung) sowie COVID-19-Effekte bei älteren Menschen reflektieren. Jedoch zeigt sich keine dramatische Übersterblichkeit.
 
 ### Zusammenfassung
 
-Die Sterbetafeln zeigen **keine dramatische Steigerung der Mortalität** während oder nach der Pandemie. Die Unterschiede zwischen den drei Perioden sind in allen Altersgruppen unter 60 Jahren minimal und wirtschaftlich/epidemiologisch irrelevant.
+Die Sterbetafeln zeigen **keine dramatische Steigerung der Mortalität**. Die Beobachtungen:
+- **Unter 60 Jahren:** Alle Unterschiede unter 8% - epidemiologisch irrelevant
+- **60-80 Jahren:** Moderater Anstieg um 3-5%, aber keine Dramatik
+- **Über 80 Jahren:** Stabil, trotz hoher absoluter Sterbewahrscheinlichkeit (95%+)
+- **Post-Pandemie:** Stabilisierung der Trends, keine Rebound-Effekte
 
 ## Verwendung
 
