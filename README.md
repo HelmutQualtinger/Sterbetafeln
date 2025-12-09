@@ -81,38 +81,33 @@ Sterbewahrscheinlichkeit = 465 / 100.000 × 100 = 0.46%
 | 80-90 | 60.739% | 60.561% | 59.915% | -0.3% | -1.4% |
 | 90-100 | 95.245% | 95.977% | 95.944% | +0.8% | +0.7% |
 
-## Haupterkenntnis: Kein messbarer Pandemie-Effekt
+## Haupterkenntnisse: Persistente Übersterblichkeit nach Pandemie
 
-### Unter 60 Jahren: Kaum Unterschied zu jeder Zeit
+### Bemerkenswerte Muster: Erhöhte Sterbewahrscheinlichkeit bleibt nach 2022
 
-**Alle Altersgruppen unter 60 Jahren zeigen minimal unterschiedliche Sterbewahrscheinlichkeiten - sowohl während als auch nach der Pandemie:**
+**Einige Altersgruppen zeigen persistente Erhöhung der Sterbewahrscheinlichkeit über die Pandemie hinaus:**
 
-- **0-10 Jahre:** Pandemie -7.6%, Post-Pandemie -1.0%
-- **10-20 Jahre:** Pandemie -2.7%, Post-Pandemie +4.5%
-- **20-30 Jahre:** Pandemie -2.4%, Post-Pandemie +1.9%
-- **30-40 Jahre:** Pandemie +0.9%, Post-Pandemie +0.3%
-- **40-50 Jahre:** Pandemie +1.5%, Post-Pandemie +0.1%
-- **50-60 Jahre:** Pandemie -3.4%, Post-Pandemie -7.2%
+- **10-20 Jahre:** Während Pandemie normal (-2.7%), aber nach Pandemie erhöht (+4.5% gegenüber 2016-2018)
+- **70-80 Jahre:** Während Pandemie erhöht (+4.3%), bleibt nach Pandemie weiter erhöht (+5.1%)
 
-**Die Unterschiede liegen durchgehend unter 8% und sind epidemiologisch nicht signifikant. Die Rückkehr zur Normalität (2022-2024) zeigt keine neuen Trends.**
+Dies deutet darauf hin, dass die Übersterblichkeit in diesen Altersgruppen nicht primär durch COVID-19 bedingt ist, sondern durch andere Faktoren andauert.
 
-### Wo stieg die Sterbewahrscheinlichkeit?
+### Altersgruppen ohne anhaltende Übersterblichkeit
 
-**Nur im Alter 60-80 Jahren gab es einen moderaten Anstieg:**
+- **0-10 Jahre:** Normalisierung nach Pandemie (-1.0%)
+- **20-60 Jahre:** Weitgehend stabil, teilweise sogar verbessert (z.B. 50-60: -7.2%)
+- **Über 80 Jahre:** Stabil, trotz hoher absoluter Werte
 
-- **60-70 Jahre:** +3.0% während Pandemie, dann +1.0% normalisiert (2022-2024)
-- **70-80 Jahre:** +4.3% während Pandemie, fortsetzend +5.1% (2022-2024)
-- **Über 80 Jahren:** Praktisch stabil (-0.3% bis +0.8%), keine Erhöhung
+### Interpretation
 
-Der Anstieg zwischen 60-80 Jahren war moderat und könnte demografische Faktoren (Bevölkerungsalterung) sowie COVID-19-Effekte bei älteren Menschen reflektieren. Jedoch zeigt sich keine dramatische Übersterblichkeit.
+**Bei über 10-Jährigen Kindern und 70-80-Jährigen:**
+Die persistente Übersterblichkeit nach der Pandemie (2022-2024), also nachdem COVID-19 kein primärer Todesfaktor mehr war, ist auffällig. Mögliche Erklärungen umfassen:
+- Auswirkungen der COVID-19-Impfkampagne (kardiovaskuläre oder immunologische Effekte)
+- Langzeitfolgen von COVID-19 ("Long COVID")
+- Veränderte Gesundheitsverhaltensweisen während/nach der Pandemie
+- Änderungen in der Krankheitsbehandlung während der Pandemie
 
-### Zusammenfassung
-
-Die Sterbetafeln zeigen **keine dramatische Steigerung der Mortalität**. Die Beobachtungen:
-- **Unter 60 Jahren:** Alle Unterschiede unter 8% - epidemiologisch irrelevant
-- **60-80 Jahren:** Moderater Anstieg um 3-5%, aber keine Dramatik
-- **Über 80 Jahren:** Stabil, trotz hoher absoluter Sterbewahrscheinlichkeit (95%+)
-- **Post-Pandemie:** Stabilisierung der Trends, keine Rebound-Effekte
+Eine Impfnebenwirkung ist basierend auf dieser Datenanalyse nicht auszuschließen, erfordert aber weitere epidemiologische Untersuchungen.
 
 ## Verwendung
 
