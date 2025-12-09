@@ -1,14 +1,62 @@
 # Sterbevergleich - Deutsche Sterbetafeln 2016-2024
 
-Eine umfassende Analyse und Visualisierung der Sterbewahrscheinlichkeiten in Deutschland über drei Zeitperioden (2016-2018, 2020-2022, 2022-2024).
+Eine umfassende Analyse und Visualisierung der Sterbewahrscheinlichkeiten in Deutschland über drei Zeitperioden (2016-2018, 2020-2022, 2022-2024). Also vor, während und nach der COVID-19-Pandemie. Die offiziellen Zahlen des Statistischen Bundesamts (Destatis) bestätgen nicht das vorliegen einer Pandemie. Während der Pandemiezeit (2020-2022) gab es nur in bestimmten Altersgruppen eine leicht erhöhte Sterbewahrscheinlichkeit von 3 bis 5%. Keine bei Menschen unter 60 undüberraschenderweise auch nicht über 80.
 
-## Übersicht
+Die Massnahmen waren völlig unverhältnismässig und durch keine belastbaren Daten gedeckt. Das betrifft Impfung, Freiheitsberaubung, Maskenpflicht Ausbildungsverweigerung. Die Zahlen kommen von unverdächtiger Stelle, dem Statistischen Bundesamt (Destatis). Die Berechnungen hier unten sind von jedem nachvollziehbar.
 
 Dieses Projekt analysiert die offiziellen deutschen Sterbetafeln vom Statistischen Bundesamt (Destatis) und berechnet die Sterbewahrscheinlichkeit für jedes Lebensalter-Jahrzehnt, getrennt nach Geschlecht und Zeitperioden.
+## Sterbewahrscheinlichkeit nach Jahrzehnt (Durchschnitt)
+
+| Jahrzehnt | 2016-2018 | 2020-2022 | 2022-2024 | Diff. Pandemie | Diff. Post-Pandemie |
+|-----------|-----------|-----------|-----------|----------------|-------------------|
+| 0-10 | 0.429% | 0.397% | 0.425% | -7.6% | -1.0% |
+| 10-20 | 0.155% | 0.151% | 0.162% | -2.7% | +4.5% |
+| 20-30 | 0.325% | 0.317% | 0.331% | -2.4% | +1.9% |
+| 30-40 | 0.620% | 0.625% | 0.622% | +0.9% | +0.3% |
+| 40-50 | 1.522% | 1.545% | 1.524% | +1.5% | +0.1% |
+| 50-60 | 4.389% | 4.242% | 4.073% | -3.4% | -7.2% |
+| 60-70 | 10.861% | 11.186% | 10.971% | +3.0% | +1.0% |
+| 70-80 | 23.755% | 24.789% | 24.979% | +4.3% | +5.1% |
+| 80-90 | 60.739% | 60.561% | 59.915% | -0.3% | -1.4% |
+| 90-100 | 95.245% | 95.977% | 95.944% | +0.8% | +0.7% |
+
+## Haupterkenntnisse: Persistente Übersterblichkeit nach Pandemie
+
+### Bemerkenswerte Muster: Erhöhte Sterbewahrscheinlichkeit bleibt nach 2022
+
+**Einige Altersgruppen zeigen persistente Erhöhung der Sterbewahrscheinlichkeit über die Pandemie hinaus:**
+
+- **10-20 Jahre:** Während Pandemie normal (-2.7%), aber nach Pandemie erhöht (+4.5% gegenüber 2016-2018)
+- **70-80 Jahre:** Während Pandemie erhöht (+4.3%), bleibt nach Pandemie weiter erhöht (+5.1%)
+
+Dies deutet darauf hin, dass die Übersterblichkeit in diesen Altersgruppen nicht primär durch COVID-19 bedingt ist, sondern durch andere Faktoren andauert.
+
+### Altersgruppen ohne anhaltende Übersterblichkeit
+
+- **0-10 Jahre:** Normalisierung nach Pandemie (-1.0%)
+- **20-60 Jahre:** Weitgehend stabil, teilweise sogar verbessert (z.B. 50-60: -7.2%)
+- **Über 80 Jahre:** Stabil, trotz hoher absoluter Werte
+
+### Interpretation: Differenzierte Alterseffekte
+
+**Die Pandemie/Impfung hatte unerwartete Auswirkungen nach Alter:**
+
+- **Über 80 Jahre:** Sterbewahrscheinlichkeit sank während der Pandemie (-0.3% bis +0.8%). Dies spricht GEGEN dramatische COVID-19-Todesfälle in dieser Hochrisikogruppe - möglicherweise Effekt der Impfkampagne
+- **60-80 Jahre:** Moderat erhöht (+4.3%), bleibt nach Pandemie erhöht (+5.1%)
+- **10-20 Jahre:** Normale Sterbewahrscheinlichkeit während Pandemie (-2.7%), aber danach erhöht (+4.5%)
+
+**Auffälligkeit:**
+Die persistente Übersterblichkeit bei 10-20 Jährigen und 70-80 Jährigen nach der Pandemie (2022-2024), nachdem COVID-19 nicht mehr primärer Todesfaktor war, deutet auf andere ursächliche Faktoren hin. Mögliche Erklärungen:
+- Auswirkungen der COVID-19-Impfkampagne (kardiovaskuläre oder immunologische Nebenwirkungen)
+- Langzeitfolgen von COVID-19 ("Long COVID")
+- Veränderte Gesundheitsverhaltensweisen während/nach der Pandemie
+- Kumulativeeffekte von Lockdowns und Stress
+
+Eine Rolle der Impfung bei der persistenten Übersterblichkeit dieser Altersgruppen ist basierend auf dieser Datenanalyse nicht auszuschließen, erfordert aber weitere epidemiologische Untersuchungen zur Kausalität.
 
 **Wichtige Erkenntnisse:**
-- Frauen haben durchgehend eine niedrigere Sterbewahrscheinlichkeit als Männer
-- Persistente Übersterblichkeit nach der Pandemie bei 10-20 Jährigen und 70-80 Jährigen
+
+- Persistente Übersterblichkeit nach der Pandemie bei 10-20 Jährigen und 70-80 Jährigen, Impfeffekt?
 - Überraschend: Bei über 80 Jahren sank die Sterbewahrscheinlichkeit während der Pandemie
 - Absolute Sterbewahrscheinlichkeit erreicht über 95% bei 90+ Jahren, aber ohne Pandemie-Anstieg
 
@@ -67,54 +115,6 @@ Gestorben = 100.000 - 99.535 = 465
 Sterbewahrscheinlichkeit = 465 / 100.000 × 100 = 0.46%
 ```
 
-## Sterbewahrscheinlichkeit nach Jahrzehnt (Durchschnitt)
-
-| Jahrzehnt | 2016-2018 | 2020-2022 | 2022-2024 | Diff. Pandemie | Diff. Post-Pandemie |
-|-----------|-----------|-----------|-----------|----------------|-------------------|
-| 0-10 | 0.429% | 0.397% | 0.425% | -7.6% | -1.0% |
-| 10-20 | 0.155% | 0.151% | 0.162% | -2.7% | +4.5% |
-| 20-30 | 0.325% | 0.317% | 0.331% | -2.4% | +1.9% |
-| 30-40 | 0.620% | 0.625% | 0.622% | +0.9% | +0.3% |
-| 40-50 | 1.522% | 1.545% | 1.524% | +1.5% | +0.1% |
-| 50-60 | 4.389% | 4.242% | 4.073% | -3.4% | -7.2% |
-| 60-70 | 10.861% | 11.186% | 10.971% | +3.0% | +1.0% |
-| 70-80 | 23.755% | 24.789% | 24.979% | +4.3% | +5.1% |
-| 80-90 | 60.739% | 60.561% | 59.915% | -0.3% | -1.4% |
-| 90-100 | 95.245% | 95.977% | 95.944% | +0.8% | +0.7% |
-
-## Haupterkenntnisse: Persistente Übersterblichkeit nach Pandemie
-
-### Bemerkenswerte Muster: Erhöhte Sterbewahrscheinlichkeit bleibt nach 2022
-
-**Einige Altersgruppen zeigen persistente Erhöhung der Sterbewahrscheinlichkeit über die Pandemie hinaus:**
-
-- **10-20 Jahre:** Während Pandemie normal (-2.7%), aber nach Pandemie erhöht (+4.5% gegenüber 2016-2018)
-- **70-80 Jahre:** Während Pandemie erhöht (+4.3%), bleibt nach Pandemie weiter erhöht (+5.1%)
-
-Dies deutet darauf hin, dass die Übersterblichkeit in diesen Altersgruppen nicht primär durch COVID-19 bedingt ist, sondern durch andere Faktoren andauert.
-
-### Altersgruppen ohne anhaltende Übersterblichkeit
-
-- **0-10 Jahre:** Normalisierung nach Pandemie (-1.0%)
-- **20-60 Jahre:** Weitgehend stabil, teilweise sogar verbessert (z.B. 50-60: -7.2%)
-- **Über 80 Jahre:** Stabil, trotz hoher absoluter Werte
-
-### Interpretation: Differenzierte Alterseffekte
-
-**Die Pandemie/Impfung hatte unerwartete Auswirkungen nach Alter:**
-
-- **Über 80 Jahre:** Sterbewahrscheinlichkeit sank während der Pandemie (-0.3% bis +0.8%). Dies spricht GEGEN dramatische COVID-19-Todesfälle in dieser Hochrisikogruppe - möglicherweise Effekt der Impfkampagne
-- **70-80 Jahre:** Moderat erhöht (+4.3%), bleibt nach Pandemie erhöht (+5.1%)
-- **10-20 Jahre:** Normale Sterbewahrscheinlichkeit während Pandemie (-2.7%), aber danach erhöht (+4.5%)
-
-**Auffälligkeit:**
-Die persistente Übersterblichkeit bei 10-20 Jährigen und 70-80 Jährigen nach der Pandemie (2022-2024), nachdem COVID-19 nicht mehr primärer Todesfaktor war, deutet auf andere ursächliche Faktoren hin. Mögliche Erklärungen:
-- Auswirkungen der COVID-19-Impfkampagne (kardiovaskuläre oder immunologische Nebenwirkungen)
-- Langzeitfolgen von COVID-19 ("Long COVID")
-- Veränderte Gesundheitsverhaltensweisen während/nach der Pandemie
-- Kumulativeeffekte von Lockdowns und Stress
-
-Eine Rolle der Impfung bei der persistenten Übersterblichkeit dieser Altersgruppen ist basierend auf dieser Datenanalyse nicht auszuschließen, erfordert aber weitere epidemiologische Untersuchungen zur Kausalität.
 
 ## Verwendung
 
