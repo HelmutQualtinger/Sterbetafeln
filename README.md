@@ -182,7 +182,7 @@ python generate_pdf.py
 
 ## Datenquellen
 
-- **Quelle:** Statistisches Bundesamt (Destatis), Deutschland
+- **Quelle:** [Statistisches Bundesamt (Destatis) - Genesis-Datenbank](https://www-genesis.destatis.de/datenbank/online/url/19b28f8e)
 - **Tabelle:** 12621-0001 (Sterbetafeln)
 - **Datentyp:** Periodensterbetafeln
 - **Geographie:** Deutschland (gesamt)
