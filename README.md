@@ -115,8 +115,6 @@ Gestorben = 100.000 - 99.535 = 465
 Sterbewahrscheinlichkeit = 465 / 100.000 × 100 = 0.46%
 ```
 
-```
-
 ## Anforderungen
 
 ### Für Python-Skripte
