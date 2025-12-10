@@ -76,7 +76,6 @@ Eine Rolle der Impfung bei der persistenten Übersterblichkeit dieser Altersgrup
 #### Markdown & PDF Reports
 - **Sterbevergleich.md** - Markdown-Datei mit allen Tabellen und Daten
 - **Sterbevergleich.pdf** - PDF im Landscape-Format (24 KB)
-- **Sterbevergleich_2col.pdf** - **Kompaktes 2-spaltiges PDF im Landscape-Format** (16 KB) ⭐
 
 #### Interaktive Visualisierung
 - **sterbevergleich_plots.html** - Interaktive Plots mit Plotly.js
@@ -94,9 +93,6 @@ Eine Rolle der Impfung bei der persistenten Übersterblichkeit dieser Altersgrup
 #### Visualisierung
 - **plot_sterbevergleich.py** - Generiert interaktive HTML-Plots mit Plotly
 - **generate_pdf.py** - Generiert 2-spaltiges Landscape-PDF
-
-#### Hilfsdateien
-- **template.tex** - LaTeX-Template für PDF-Generierung
 
 ## Berechnung der Sterbewahrscheinlichkeit
 
@@ -119,61 +115,15 @@ Gestorben = 100.000 - 99.535 = 465
 Sterbewahrscheinlichkeit = 465 / 100.000 × 100 = 0.46%
 ```
 
-
-## Verwendung
-
-### 1. Berichte ansehen
-
-```bash
-# Markdown-Report lesen
-cat Sterbevergleich.md
-
-# PDFs ansehen
-open Sterbevergleich.pdf
-open Sterbevergleich_2col.pdf  # Empfohlen: kompakt und übersichtlich
-```
-
-### 2. Interaktive Plots
-
-```bash
-# Browser öffnen mit HTML-Plots
-open sterbevergleich_plots.html
-```
-
-### 3. Eigene Analysen durchführen
-
-Daten für eine einzelne CSV-Datei berechnen:
-
-```bash
-python Sterbevergleich.py
-```
-
-Alle 3 Dateien verarbeiten und Markdown generieren:
-
-```bash
-python Sterbevergleich_all.py
-```
-
-Plots generieren:
-
-```bash
-python plot_sterbevergleich.py
-```
-
-2-spaltiges PDF generieren:
-
-```bash
-python generate_pdf.py
 ```
 
 ## Anforderungen
 
 ### Für Python-Skripte
-- Python 2.7 oder 3.x
+- Python  3.x
 - Keine zusätzlichen Pakete erforderlich
 
 ### Für PDF-Generierung
-- xelatex (LaTeX-Engine)
 - Für pandoc-Konvertierung: pandoc + xelatex
 
 ### Für interaktive Plots
@@ -197,10 +147,6 @@ python generate_pdf.py
 - **Sterbewahrscheinlichkeit (q(x)):** Wahrscheinlichkeit, dass eine Person zwischen Alter x und x+10 stirbt
 - Diese Projekt verwendet q(x)-Werte aus den Sterbetafeln
 - Nicht zu verwechseln mit roher Sterberate (Todesfälle pro 1000 Einwohner)
-
-### Lineare Skala in den Plots
-- Die interaktiven Plots verwenden eine lineare (nicht logarithmische) Y-Achse
-- Dies zeigt die tatsächliche Magnitude der Sterblichkeit
 - Im hohen Alter dominiert die exponentielle Zunahme die Visualisierung
 
 ## Struktur der Sterbetafel-CSV
@@ -238,5 +184,5 @@ Für Fragen zu diesem Projekt:
 - Analyse der 3 Sterbetafeln (2016-2018, 2020-2022, 2022-2024)
 - Markdown-Report mit vergleichenden Tabellen
 - Interaktive HTML-Plots
-- PDF-Reports (einspaltig und 2-spaltig)
+- PDF-Reports
 - Alle Python-Skripte zur Datenverarbeitung
