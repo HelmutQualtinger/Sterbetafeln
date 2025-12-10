@@ -1,6 +1,3 @@
-# Sterbevergleich - Deutsche Sterbetafeln 2016-2024
-
-![COVID Scam Analysis](covid-scam.webp)
 
 Eine umfassende Analyse und Visualisierung der Sterbewahrscheinlichkeiten in Deutschland über drei Zeitperioden (2016-2018, 2020-2022, 2022-2024) - vor, während und nach der COVID-19-Pandemie.
 

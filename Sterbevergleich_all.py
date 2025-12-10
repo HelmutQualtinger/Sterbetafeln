@@ -95,15 +95,40 @@ md_lines.append(b"")
 # Gesamtübersicht Männer
 md_lines.append(b"## Maenner - Sterbewahrscheinlichkeit (%)")
 md_lines.append(b"")
-md_lines.append(b"| Jahrzehnt | 2016-2018 | 2020-2022 | 2022-2024 |")
-md_lines.append(b"|-----------|-----------|-----------|-----------|")
+md_lines.append(b"| Jahrzehnt | 2016-2018 | 2020-2022 | % Aenderung | 2022-2024 | % Aenderung |")
+md_lines.append(b"|-----------|-----------|-----------|-------------|-----------|-------------|")
 for decade in sorted(results_all['2016-2018'].keys(), key=lambda x: int(x.split('-')[0])):
     values = [decade]
-    for period in ['2016-2018', '2020-2022', '2022-2024']:
-        if decade in results_all[period]:
-            values.append("{:.4f}".format(results_all[period][decade]['männlich']))
+    if decade in results_all['2016-2018']:
+        baseline = results_all['2016-2018'][decade]['männlich']
+        values.append("{:.4f}".format(baseline))
+
+        # 2020-2022 comparison
+        if decade in results_all['2020-2022']:
+            val_2022 = results_all['2020-2022'][decade]['männlich']
+            values.append("{:.4f}".format(val_2022))
+            if baseline != 0:
+                pct_change_2022 = ((val_2022 - baseline) / baseline) * 100
+                values.append("{:+.2f}%".format(pct_change_2022))
+            else:
+                values.append("N/A")
         else:
             values.append("-")
+            values.append("-")
+
+        # 2022-2024 comparison
+        if decade in results_all['2022-2024']:
+            val_2024 = results_all['2022-2024'][decade]['männlich']
+            values.append("{:.4f}".format(val_2024))
+            if baseline != 0:
+                pct_change_2024 = ((val_2024 - baseline) / baseline) * 100
+                values.append("{:+.2f}%".format(pct_change_2024))
+            else:
+                values.append("N/A")
+        else:
+            values.append("-")
+            values.append("-")
+
     line = "| {} |".format(" | ".join(values))
     md_lines.append(line.encode('utf-8'))
 md_lines.append(b"")
@@ -111,15 +136,40 @@ md_lines.append(b"")
 # Gesamtübersicht Frauen
 md_lines.append(b"## Frauen - Sterbewahrscheinlichkeit (%)")
 md_lines.append(b"")
-md_lines.append(b"| Jahrzehnt | 2016-2018 | 2020-2022 | 2022-2024 |")
-md_lines.append(b"|-----------|-----------|-----------|-----------|")
+md_lines.append(b"| Jahrzehnt | 2016-2018 | 2020-2022 | % Aenderung | 2022-2024 | % Aenderung |")
+md_lines.append(b"|-----------|-----------|-----------|-------------|-----------|-------------|")
 for decade in sorted(results_all['2016-2018'].keys(), key=lambda x: int(x.split('-')[0])):
     values = [decade]
-    for period in ['2016-2018', '2020-2022', '2022-2024']:
-        if decade in results_all[period]:
-            values.append("{:.4f}".format(results_all[period][decade]['weiblich']))
+    if decade in results_all['2016-2018']:
+        baseline = results_all['2016-2018'][decade]['weiblich']
+        values.append("{:.4f}".format(baseline))
+
+        # 2020-2022 comparison
+        if decade in results_all['2020-2022']:
+            val_2022 = results_all['2020-2022'][decade]['weiblich']
+            values.append("{:.4f}".format(val_2022))
+            if baseline != 0:
+                pct_change_2022 = ((val_2022 - baseline) / baseline) * 100
+                values.append("{:+.2f}%".format(pct_change_2022))
+            else:
+                values.append("N/A")
         else:
             values.append("-")
+            values.append("-")
+
+        # 2022-2024 comparison
+        if decade in results_all['2022-2024']:
+            val_2024 = results_all['2022-2024'][decade]['weiblich']
+            values.append("{:.4f}".format(val_2024))
+            if baseline != 0:
+                pct_change_2024 = ((val_2024 - baseline) / baseline) * 100
+                values.append("{:+.2f}%".format(pct_change_2024))
+            else:
+                values.append("N/A")
+        else:
+            values.append("-")
+            values.append("-")
+
     line = "| {} |".format(" | ".join(values))
     md_lines.append(line.encode('utf-8'))
 md_lines.append(b"")
@@ -127,15 +177,40 @@ md_lines.append(b"")
 # Gesamtübersicht Männer + Frauen
 md_lines.append(b"## Zusammen (Maenner + Frauen) - Sterbewahrscheinlichkeit (%)")
 md_lines.append(b"")
-md_lines.append(b"| Jahrzehnt | 2016-2018 | 2020-2022 | 2022-2024 |")
-md_lines.append(b"|-----------|-----------|-----------|-----------|")
+md_lines.append(b"| Jahrzehnt | 2016-2018 | 2020-2022 | % Aenderung | 2022-2024 | % Aenderung |")
+md_lines.append(b"|-----------|-----------|-----------|-------------|-----------|-------------|")
 for decade in sorted(results_all['2016-2018'].keys(), key=lambda x: int(x.split('-')[0])):
     values = [decade]
-    for period in ['2016-2018', '2020-2022', '2022-2024']:
-        if decade in results_all[period]:
-            values.append("{:.4f}".format(results_all[period][decade]['zusammen']))
+    if decade in results_all['2016-2018']:
+        baseline = results_all['2016-2018'][decade]['zusammen']
+        values.append("{:.4f}".format(baseline))
+
+        # 2020-2022 comparison
+        if decade in results_all['2020-2022']:
+            val_2022 = results_all['2020-2022'][decade]['zusammen']
+            values.append("{:.4f}".format(val_2022))
+            if baseline != 0:
+                pct_change_2022 = ((val_2022 - baseline) / baseline) * 100
+                values.append("{:+.2f}%".format(pct_change_2022))
+            else:
+                values.append("N/A")
         else:
             values.append("-")
+            values.append("-")
+
+        # 2022-2024 comparison
+        if decade in results_all['2022-2024']:
+            val_2024 = results_all['2022-2024'][decade]['zusammen']
+            values.append("{:.4f}".format(val_2024))
+            if baseline != 0:
+                pct_change_2024 = ((val_2024 - baseline) / baseline) * 100
+                values.append("{:+.2f}%".format(pct_change_2024))
+            else:
+                values.append("N/A")
+        else:
+            values.append("-")
+            values.append("-")
+
     line = "| {} |".format(" | ".join(values))
     md_lines.append(line.encode('utf-8'))
 md_lines.append(b"")
