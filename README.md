@@ -4,7 +4,7 @@
 
 Eine umfassende Analyse und Visualisierung der Sterbewahrscheinlichkeiten in Deutschland über drei Zeitperioden (2016-2018, 2020-2022, 2022-2024) - vor, während und nach der COVID-19-Pandemie.
 
-Die offiziellen Zahlen des Statistischen Bundesamts (Destatis) bestätigen nicht das Vorliegen einer dramatischen Pandemie. Während der Pandemiezeit (2020-2022) gab es nur in bestimmten Altersgruppen eine leicht erhöhte Sterbewahrscheinlichkeit von 3 bis 5%. Bei Menschen unter 60 Jahren nicht, und überraschenderweise auch nicht über 80 Jahren.
+Die offiziellen Zahlen des Statistischen Bundesamts (Destatis) bestätigen nicht das Vorliegen einer dramatischen Pandemie. Während der Pandemiezeit (2020-2022) gab es nur in bestimmten Altersgruppen eine leicht erhöhte Sterbewahrscheinlichkeit von 3 bis 4%. Bei Menschen unter 60 Jahren nicht, und überraschenderweise auch nicht über 80 Jahren.
 
 Die Daten stammen von unverdächtiger Stelle - dem Statistischen Bundesamt (Destatis). Die Berechnungen sind von jedem nachvollziehbar und überprüfbar.
 
