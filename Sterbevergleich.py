@@ -73,8 +73,8 @@ for i, row in enumerate(data):
 
 # Jahrzehnte berechnen (0-10, 10-20, ..., 90-100)
 decades = []
-for start_age in range(0, 101, 10):
-    end_age = start_age + 10
+for start_age in range(0, 100, 5): # Adjusted range for 5-year intervals
+    end_age = start_age + 5 # Adjusted end_age for 5-year intervals
 
     if start_age in survivors and end_age in survivors:
         decades.append((start_age, end_age))

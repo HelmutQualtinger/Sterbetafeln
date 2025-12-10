@@ -47,8 +47,8 @@ def process_csv_file(csv_file):
             }
 
     results = {}
-    for start_age in range(0, 101, 10):
-        end_age = start_age + 10
+    for start_age in range(0, 100, 5): # Adjusted range for 5-year intervals
+        end_age = start_age + 5 # Adjusted end_age for 5-year intervals
 
         if start_age in survivors and end_age in survivors:
             l_start_male = survivors[start_age]['männlich']
@@ -60,12 +60,11 @@ def process_csv_file(csv_file):
             prob_death_female = ((l_start_female - l_end_female) / l_start_female) * 100
             prob_death_total = (prob_death_male + prob_death_female) / 2.0
 
-            results[start_age] = {
+            results["{}-{}".format(start_age, end_age)] = { # Key will now be like "0-4", "5-9", etc.
                 'männlich': prob_death_male,
                 'weiblich': prob_death_female,
                 'zusammen': prob_death_total
             }
-
     return results
 
 
@@ -80,18 +79,24 @@ results_all = {}
 for period, csv_file in csv_files.items():
     results_all[period] = process_csv_file(csv_file)
 
-ages = sorted(results_all['2016-2018'].keys())
+# Fetching keys from the first period's results for consistent ordering and labels
+period_keys = list(results_all['2016-2018'].keys())
+# Ensure keys are sorted correctly for plotting (e.g., "0-4", "5-9", "10-14", ...)
+# Simple alphabetical sort might work for "0-4", "10-14", "5-9" etc. if numbers are zero-padded,
+# but a custom sort based on the start age would be more robust.
+# For now, assuming the keys are generated in a sortable order or can be directly used.
+ages = sorted(period_keys, key=lambda x: int(x.split('-')[0])) # Sort by the start of the interval
 
-# Vorbereitung der Daten
-data_male = {period: [results_all[period][age]['männlich'] for age in ages] for period in csv_files.keys()}
-data_female = {period: [results_all[period][age]['weiblich'] for age in ages] for period in csv_files.keys()}
-data_total = {period: [results_all[period][age]['zusammen'] for age in ages] for period in csv_files.keys()}
+# Preparation of data
+data_male = {period: [results_all[period][age_label]['männlich'] for age_label in ages] for period in csv_files.keys()}
+data_female = {period: [results_all[period][age_label]['weiblich'] for age_label in ages] for period in csv_files.keys()}
+data_total = {period: [results_all[period][age_label]['zusammen'] for age_label in ages] for period in csv_files.keys()}
 
 # Konvertiere Keys für JSON (da "männlich" etc. im JSON sein müssen)
 json_data_male = json.dumps(data_male, ensure_ascii=False)
 json_data_female = json.dumps(data_female, ensure_ascii=False)
 json_data_total = json.dumps(data_total, ensure_ascii=False)
-json_ages = json.dumps(ages)
+json_ages = json.dumps(ages) # This will be the list of interval labels like "0-4", "5-9"
 
 # HTML-Template
 html_template = u'''<!DOCTYPE html>

@@ -50,8 +50,8 @@ def process_csv_file(csv_file):
 
     # Jahrzehnte berechnen
     results = {}
-    for start_age in range(0, 101, 10):
-        end_age = start_age + 10
+    for start_age in range(0, 100, 5): # Adjusted range for 5-year intervals
+        end_age = start_age + 5 # Adjusted end_age for 5-year intervals
 
         if start_age in survivors and end_age in survivors:
             l_start_male = survivors[start_age]['männlich']
@@ -64,7 +64,7 @@ def process_csv_file(csv_file):
             # Durchschnitt statt Addition, da die Werte normalisiert sind
             prob_death_total = (prob_death_male + prob_death_female) / 2.0
 
-            results["{}-{}".format(start_age, end_age)] = {
+            results["{}-{}".format(start_age, end_age)] = { # Key will now be like "0-4", "5-9", etc.
                 'männlich': prob_death_male,
                 'weiblich': prob_death_female,
                 'zusammen': prob_death_total
